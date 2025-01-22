@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Header header="Rsyslog Configuration Helper"/>
-      <Requirements configSegement="Server side configuration"/>
+      <Requirements configSegement="Provide Configuration Requirements"/>
       <Results />
       <Footer />
     </div>

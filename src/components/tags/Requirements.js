@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { Col, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
+import Remote from '../options/Remote';
 
 function Requirements(props) {
     const [loggingType, setLoggingType] = useState('local'); // Default to 'local'
@@ -22,28 +24,28 @@ function Requirements(props) {
         </Form.Select>
     );
 
-    const RemoteLogging = () => (
-        <div>
-            <h5>Remote Logging</h5>
-            <p>This is the remote logging component.</p>
-        </div>
-    );
     return (
         <Container fluid>
             <Card className="text-center">
                 <Card.Header>{props.configSegement}</Card.Header>
                 <Card.Body>
-                    <Card.Title>Special title treatment</Card.Title>
                     <Card.Text>
-                        <Form.Select value={loggingType} onChange={handleLoggingChange}>
-                            <option value="local">Local logging</option>
-                            <option value="remote">Remote logging</option>
-                        </Form.Select>
+                        <Row>
+                            <Form.Select value={loggingType} onChange={handleLoggingChange}>
+                                <option value="local">Local logging</option>
+                                <option value="remote">Remote logging</option>
+                            </Form.Select>
+                        </Row>
                     </Card.Text>
-                    {loggingType === 'local' ? <LocalLogging /> : <RemoteLogging />}
-                    <Button variant="primary">Go somewhere</Button>
+                    <Row>
+                        {loggingType === 'local' ? <LocalLogging /> : <Remote />}
+                    </Row>
+                    <hr />
+                    <Row>
+                        <Col><Button variant="primary">Get Configuration</Button></Col>
+                    </Row>
                 </Card.Body>
-                <Card.Footer className="text-muted">2 days ago</Card.Footer>
+                <Card.Footer className="text-muted"></Card.Footer>
             </Card>
         </Container>
     )
