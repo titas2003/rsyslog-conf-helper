@@ -1,0 +1,19 @@
+.result-text {
+    text-align: left;
+}
+
+.command-container {
+    background-color: rgb(9, 9, 9);
+    color: rgb(254, 252, 252);
+    border-radius: 3px;
+    padding: 2px;
+    padding-left: 9px;
+}
+
+.code-container {
+    background-color: rgb(7, 8, 8);
+    color: rgb(158, 206, 238);
+    border-radius: 4px;
+    padding: 2px;
+    padding-left: 9px;
+}
