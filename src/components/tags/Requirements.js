@@ -15,7 +15,10 @@ function Requirements(props) {
     // Define the LocalLogging and RemoteLogging components inline
     const LocalLogging = () => (
         <Form.Select>
-            <option>Default select</option>
+            <option>Create templates</option>
+            <option>Create Filters</option>
+            <option>Save audit logs in another log file</option>
+            <option>Creating Rulesets</option>
         </Form.Select>
     );
 
